@@ -18,6 +18,9 @@ MESSAGE = (
 
 OUTPUT_PATH = "/output/entry.txt"
 
+# Guard: the entry must stay a single line (no embedded newline).
+assert "\n" not in MESSAGE, "message must be a single line"
+
 
 def main() -> None:
     text = MESSAGE.strip()
